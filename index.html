@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="cleartype" content="on">
+        <meta http-equiv="Cache-Control" content="no-transform">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>{{%title}}</title>
+        <meta name="renderer" content="webkit">
+        <meta name="applicable-device" content="pc, mobile">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <meta name="description" content="hello world!">
+        <link rel="stylesheet" href="c/g.css">
+    </head>
+<body>
+    <header id="m-page" class="m-page"></header>
+    <template id="m_page">
+        <h1 class="m-name"><a id="m-name" href="{{%mUrl}}">{{=mName}}</a><i class="i i-sc"></i></h1>
+        <nav class="m-nav">
+            {{@nav}}
+                <a href="{{%_key}}">{{=_val}}</a><span>~</span>
+            {{/@nav}}
+        </nav>
+        <div id="m-bg" class="m-bg"></div>
+    </template>
+    <script src="j/g.js"></script>
+</body>
+</html>
