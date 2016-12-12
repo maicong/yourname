@@ -157,15 +157,15 @@ td, th {
     bottom: -10%;
     left: -10%;
     margin: auto;
-    background: url(../i/bg.jpg) center no-repeat;
+    background: #362b49 url(../i/bg.jpg) center no-repeat;
     background-size: cover;
-
+    transition: transform .3s ease-in-out;
 }
 .m-page .m-name {
     position: relative;
     z-index: 2;
-    left: -34rem;
-    top: 13rem;
+    right: -34rem;
+    top: 30rem;
     font-size: 5rem;
     font-weight: bold;
     margin: 0;
@@ -173,7 +173,7 @@ td, th {
 .m-page .m-name a {
     font-size: 9rem;
     color: #fff;
-    text-shadow: -30px -30px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: -30px -30px 1px rgba(255, 255, 255, 0.2);
     transition-duration: 0s;
 }
 .m-page .m-nav {
@@ -195,7 +195,7 @@ td, th {
 }
 .m-page .m-nav a:hover {
     font-size: 2.5rem;
-    text-shadow: -10px -5px 1px #fff;
+    text-shadow: -15px -10px 1px rgba(255, 255, 255, 0.3);
 }
 .m-page .m-nav a:hover:after {
     position: absolute;

@@ -65,20 +65,15 @@
     };
     var tpl = new t(_h('m_page'));
     var args = {
-        mUrl: 'http://x.daima.co/',
-        mName: '麦田一根葱',
-        nav: {
-            "/#!index": "首页",
-            "/#!code": "代码",
-            "/#!life": "生活",
-            "/#!lab": "实验",
-            "/#!msg": "留言"
-        }
+        mUrl: 'https://maicong.github.io/iSeeU',
+        mName: '我们好像在哪见过'
     };
-    var now_nav = location.hash ? location.hash.match(/#!([^/]+)/g)[0] : '/#!index';
-    var now_title = args.nav[now_nav];
-    document.title = now_title + ' - ' + args.mName;
+    var now_title = args.mName;
+    document.title = '我们好像在哪见过';
     _('m-page').innerHTML = tpl.render(args);
+    _('m-page').onmouseenter = function() {
+        _('m-bg').style.transitionDuration = null;
+    };
     _('m-page').onmousemove = function(e) {
         var w = this.scrollWidth,
             h = this.scrollHeight,
@@ -90,10 +85,9 @@
             pageY = (pageY - this.offsetTop) - (h / 2),
             newX = ((sw * pageX)) * - 1,
             newY = ((sh * pageY)) * - 1;
-        _('m-bg').style.webkitTransform = 'matrix(1,0,0,1,' + newX + ',' + newY + ')';
+        _('m-bg').style.transitionDuration = '0s';
         _('m-bg').style.transform = 'matrix(1,0,0,1,' + newX + ',' + newY + ')';
-        _('m-name').style.webkitTransform = ( -30 + newX) + 'px ' + ( -30 + newY) + 'px 1px rgba(0, 0, 0, 0.2)';
-        _('m-name').style.textShadow = ( -30 + newX) + 'px ' + (-30 + newY) + 'px 1px rgba(0, 0, 0, 0.2)';
+        _('m-name').style.textShadow = ( -30 + newX) + 'px ' + (-30 + newY) + 'px 1px rgba(255, 255, 255, 0.2)';
 
     };
 })();
