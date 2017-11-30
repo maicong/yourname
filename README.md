@@ -1,3 +1,1 @@
-# Your Name
-
-[I see you](https://maicong.github.io/yourname)
+# [Your Name](https://maicong.github.io/yourname)
