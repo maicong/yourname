@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <title>❤</title>
+  <meta name="author" content="MaiCong (maicong.me)">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <meta name="description" content="传说相遇时，每秒的心跳有 201602/24/3600 ≈ 2.333 次">
+  <style>
+    @-ms-viewport {
+      width: device-width
+    }
+
+    @font-face {
+      font-family: CustomFont;
+      src: local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("PingFang SC"), local("WenQuanYi Micro Hei")
+    }
+
+    @font-face {
+      font-family: CustomFont;
+      src: local("San Francisco"), local("Noto Sans"), local(Helvetica), local(Arial);
+      unicode-range: U+00-024F
+    }
+
+    @font-face {
+      font-family: CustomFont;
+      src: local("Microsoft YaHei UI"), local("Microsoft YaHei"), local("PingFang SC"), local("WenQuanYi Micro Hei");
+      unicode-range: U+270C
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    :before,
+    :after {
+      box-sizing: border-box
+    }
+
+    html {
+      font-size: 65%;
+      height: 100%;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%
+    }
+
+    body {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: "San Francisco", "Noto Sans", "Helvetica Neue", Helvetica, Arial, CustomFont, "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+
+    .heart {
+      width: 2.33rem;
+      height: 2.33rem;
+      color: red;
+      -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+    }
+    .beat {
+      -webkit-animation: beat 1.175s linear .5875s infinite;
+      animation: beat 1.175s linear .5875s infinite;
+    }
+
+    @-webkit-keyframes beat {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      30% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      40% {
+        -webkit-transform: scale(2.33);
+        transform: scale(2.33)
+      }
+      50% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      60% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      70% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+      }
+      80% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+
+    @keyframes beat {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      30% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      40% {
+        -webkit-transform: scale(2.33);
+        transform: scale(2.33)
+      }
+      50% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      60% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      70% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+      }
+      80% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg class="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.5 47.5">
+    <defs>
+      <clipPath id="a"><path d="M0 38h38V0H0v38z"/></clipPath>
+    </defs>
+    <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 47.5)">
+      <path
+      d="M36.885 25.166c0 5.45-4.418 9.868-9.867 9.868-3.308 0-6.227-1.632-8.018-4.128-1.79 2.496-4.71 4.129-8.017 4.129-5.45 0-9.868-4.418-9.868-9.868 0-.773.098-1.52.266-2.242C2.75 14.413 12.216 5.431 19 2.965c6.783 2.466 16.249 11.448 17.617 19.96.17.721.268 1.47.268 2.241"
+      fill="#be1931"/>
+    </g>
+  </svg>
+  <script>
+    if ('Audio' in window) {
+      var audio = new Audio()
+      var play = function () {
+        setTimeout (function () {
+          audio.play()
+        }, 587.5)
+      }
+      audio.src = 'm/heartbeat.mp3';
+      audio.addEventListener('canplay', () => {
+        play()
+        document.querySelector('.heart').classList.add('beat')
+      })
+      audio.addEventListener('ended', () => {
+        play()
+      })
+    }
+  </script>
+</body>
+</html>
+
+<!-- 传说相遇时，每秒的心跳有 201712/24/3600 ≈ 2.33 次 -->
